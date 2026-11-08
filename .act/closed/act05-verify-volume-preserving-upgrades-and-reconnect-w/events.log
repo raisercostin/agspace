@@ -1,0 +1,3 @@
+- 2026-11-01T18:42:47+02 #actor/actor01 created title="Verify volume-preserving upgrades and reconnect workflow"
+- 2026-11-01T19:09:39+02 #actor/actor01 attached file="runbook.md"
+- 2026-11-01T19:09:39+02 #actor/actor01 closed reason="Volume marker survived image migration and service-task replacement. Recorded reconnect, versioned image update, stop/start and rollback commands in runbook.md; future r3 command is documented, not executed. User terminal attachment and provider authentication remain private user steps."

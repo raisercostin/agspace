@@ -1,0 +1,3 @@
+- 2026-11-01T18:42:47+02 #actor/actor01 created title="Deploy OpenCode as a persistent Swarm service"
+- 2026-11-01T18:45:33+02 #actor/actor01 attached file="swarm-plan.md"
+- 2026-11-01T19:07:51+02 #actor/actor01 closed reason="Single-replica service deployed on pinned node with original volume, isolated overlay membership, verified limits, AppArmor/seccomp and non-root agent. Marker survived migration and task replacement."

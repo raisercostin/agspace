@@ -1,0 +1,4 @@
+- 2026-11-08T16:01:18+02 #actor/actor01 created title="Implement SpaceixApp and pass the first real sandbox toolchain scenario"
+- 2026-11-08T16:01:28+02 #actor/actor01 started duration="PT1H" expires-unix="1794150088"
+- 2026-11-08T16:04:02+02 #actor/actor01 added content="index.md"
+- 2026-11-08T16:09:59+02 #actor/actor01 closed reason="Implemented real SpaceixApp SSH/Swarm facade with open, exec, disconnect and inspect. Active scenario passed on namekis.com (15s initial provisioning; 21s archive/recreate with archived-generation assertions): 1 passed, 0 failed, 1 ignored. Metadata and archived volumes retained in place; multi-client test stays disabled. exec uses separate SSH calls; handles/host resolution are instance-local. No CLI installed or model request made. Evidence: remote1.md."

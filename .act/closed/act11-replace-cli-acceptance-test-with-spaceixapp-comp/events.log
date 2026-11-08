@@ -1,0 +1,5 @@
+- 2026-11-08T15:14:59+02 #actor/actor01 created title="Replace CLI acceptance test with SpaceixApp component-facade contract"
+- 2026-11-08T15:17:01+02 #actor/actor01 started duration="PT1H" expires-unix="1794147421"
+- 2026-11-08T15:17:01+02 #actor/actor01 edge-added label="supersedes" to="act10"
+- 2026-11-08T15:24:47+02 #actor/actor01 added content="index.md"
+- 2026-11-08T15:25:03+02 #actor/actor01 closed reason="Replaced CLI driver with readable SpaceixApp scenario; enforced facade-only boundary in project guidance and shared TDD practice. Removed CLI/parser/generated-script tests. Verified expected missing-facade RED; no remote operations."

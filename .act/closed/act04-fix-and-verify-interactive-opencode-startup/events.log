@@ -1,0 +1,2 @@
+- 2026-11-01T18:42:47+02 #actor/actor01 created title="Fix and verify interactive OpenCode startup"
+- 2026-11-01T19:07:51+02 #actor/actor01 closed reason="OpenCode 1.19.5 TUI running in tmux after TMPDIR moved to private home cache. Verified live process NoNewPrivs=1, CapEff=0; JBang/Rust compilation and Deno execution pass. Authentication remains a private user step."

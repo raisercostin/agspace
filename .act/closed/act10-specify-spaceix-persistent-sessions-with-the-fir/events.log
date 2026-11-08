@@ -1,0 +1,2 @@
+- 2026-11-08T15:09:38+02 #actor/actor01 created title="Specify spaceix persistent sessions with the first failing acceptance test"
+- 2026-11-08T15:13:54+02 #actor/actor01 closed reason="Created spaceix_test.ts and TDD.md. deno check passed; deno test --allow-read spaceix_test.ts produced the expected RED: spaceix.ts is not implemented. No SSH or provisioning ran. Test defines shared input/output and PID/cwd/environment continuity across two clients and reconnect."

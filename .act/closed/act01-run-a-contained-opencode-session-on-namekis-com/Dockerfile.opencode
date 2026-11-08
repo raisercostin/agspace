@@ -1,0 +1,13 @@
+FROM ghcr.io/anomalyco/opencode@sha256:f4cfe16d91efbbfca01a51c44094fba4cf82e15c7fa17de5f11f9059699b1e6e
+
+USER root
+RUN apk add --no-cache git openssh-client nodejs npm tmux build-base python3 \
+    && addgroup -g 1000 agent \
+    && adduser -D -u 1000 -G agent -h /home/agent agent \
+    && mkdir -p /home/agent/workspace \
+    && chown -R 1000:1000 /home/agent
+ENV HOME=/home/agent TERM=xterm-256color
+USER 1000:1000
+WORKDIR /home/agent/workspace
+ENTRYPOINT ["/bin/sh"]
+CMD ["-c", "exec sleep infinity"]

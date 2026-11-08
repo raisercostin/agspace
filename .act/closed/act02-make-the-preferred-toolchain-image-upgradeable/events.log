@@ -1,0 +1,3 @@
+- 2026-11-01T18:42:47+02 #actor/actor01 created title="Make the preferred toolchain image upgradeable"
+- 2026-11-01T18:45:33+02 #actor/actor01 attached file="Dockerfile.opencode-jbang-rust-deno"
+- 2026-11-01T18:47:50+02 #actor/actor01 closed reason="Built opencode-dev:2026-11-01-r2; verified non-root startup and all tool versions, with JBang resolved from /opt/jbang/bin outside persistent home. Single-node placement supports local versioned images."

@@ -1,0 +1,20 @@
+FROM ghcr.io/anomalyco/opencode@sha256:f4cfe16d91efbbfca01a51c44094fba4cf82e15c7fa17de5f11f9059699b1e6e
+
+USER root
+RUN apk add --no-cache git openssh-client tmux curl bash openjdk21-jdk rust cargo deno build-base util-linux \
+    && addgroup -g 1000 agent \
+    && adduser -D -u 1000 -G agent -h /home/agent agent \
+    && mkdir -p /home/agent/workspace \
+    && chown -R 1000:1000 /home/agent
+ARG JBANG_VERSION=0.143.0
+RUN mkdir -p /opt/jbang \
+    && curl -fsSL "https://github.com/jbangdev/jbang/releases/download/v${JBANG_VERSION}/jbang.tar" -o /tmp/jbang.tar \
+    && tar xf /tmp/jbang.tar -C /opt/jbang --strip-components=1 \
+    && rm /tmp/jbang.tar \
+    && command -v setpriv
+ENV HOME=/home/agent TERM=xterm-256color TMPDIR=/home/agent/.cache/opencode-tmp
+ENV PATH=/opt/jbang/bin:${PATH}
+USER 1000:1000
+WORKDIR /home/agent/workspace
+ENTRYPOINT ["setpriv", "--no-new-privs", "/bin/sh"]
+CMD ["-c", "mkdir -p \"$TMPDIR\" && chmod 700 \"$TMPDIR\" && tmux new-session -d -s opencode opencode && exec sleep infinity"]
